@@ -53,6 +53,6 @@ public struct ImprovedAnimations {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let presentedVC = storyboard.instantiateViewController(withIdentifier: destination)
         let presentViewController = UIApplication.shared.keyWindow?.rootViewController
-        presentViewController!.present(destination, animated: false, completion: nil)
+        presentViewController!.present(presentedVC, animated: false, completion: nil)
     }
 }
