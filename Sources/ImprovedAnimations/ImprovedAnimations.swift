@@ -28,6 +28,14 @@ import UIKit
 
 #endif
 
+func topMostController() -> UIViewController {
+    var topController: UIViewController = UIApplication.shared.keyWindow!.rootViewController!
+        while (topController.presentedViewController != nil) {
+            topController = topController.presentedViewController!
+        }
+        return topController
+}
+
 public struct ImprovedAnimations {
     public static func slideAnimation(view: UIView, direction: String, time: Float, destination: String) {
         let transition = CATransition()
@@ -51,8 +59,10 @@ public struct ImprovedAnimations {
         transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         view.window!.layer.add(transition, forKey: kCATransition)
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let topVC = topMostController()
+        //let presentedVC = storyboard.instantiateViewController(withIdentifier: destination) as! viewControllertoPresent
         let presentedVC = storyboard.instantiateViewController(withIdentifier: destination)
-        let presentViewController = UIApplication.shared.keyWindow?.rootViewController
-        presentViewController!.present(presentedVC, animated: false, completion: nil)
+        //let presentViewController = UIApplication.shared.keyWindow?.rootViewController
+        topVC.present(presentedVC, animated: false, completion: nil)
     }
 }
