@@ -29,7 +29,7 @@ import UIKit
 #endif
 
 public struct ImprovedAnimations {
-    func slideAnimation(view: UIView, direction: String, time: Float, destination: String) {
+    public static func slideAnimation(view: UIView, direction: String, time: Float, destination: String) {
         let transition = CATransition()
         transition.duration = CFTimeInterval(time)
         transition.type = CATransitionType.push
@@ -55,6 +55,6 @@ public struct ImprovedAnimations {
         let presentViewController = UIApplication.shared.keyWindow?.rootViewController
         presentViewController!.present(presentedVC, animated: false, completion: nil)
     }
-    public init() {
-    }
+    //public init() {
+    //}
 }
