@@ -29,7 +29,7 @@ import UIKit
 #endif
 
 public struct ImprovedAnimations {
-    public static func slideAnimation(view: UIView, direction: String, time: Float, destination: UIViewController) {
+    public static func slideAnimation(view: UIView, direction: String, time: Float, destination: String) {
         let transition = CATransition()
         transition.duration = CFTimeInterval(time)
         transition.type = CATransitionType.push
@@ -50,8 +50,8 @@ public struct ImprovedAnimations {
         }
         transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         view.window!.layer.add(transition, forKey: kCATransition)
-        //let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        //let presentedVC = storyboard.instantiateViewController(withIdentifier: destination)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let presentedVC = storyboard.instantiateViewController(withIdentifier: destination)
         let presentViewController = UIApplication.shared.keyWindow?.rootViewController
         presentViewController!.present(destination, animated: false, completion: nil)
     }
