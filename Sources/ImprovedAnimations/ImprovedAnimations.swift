@@ -50,11 +50,9 @@ public struct ImprovedAnimations {
         }
         transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         view.window!.layer.add(transition, forKey: kCATransition)
-        let storyboard = UIStoryboard(name: "main", bundle: nil)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let presentedVC = storyboard.instantiateViewController(withIdentifier: destination)
         let presentViewController = UIApplication.shared.keyWindow?.rootViewController
         presentViewController!.present(presentedVC, animated: false, completion: nil)
     }
-    //public init() {
-    //}
 }
