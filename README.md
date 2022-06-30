@@ -2,14 +2,14 @@
 
 A package designed to make animations between different view controllers as simple as possible!
 
-## 🖥️ Installation
+# 🖥️ Installation
 
-# Supported Platforms
+## Supported Platforms
 
 iOS is the only platform supported for now
 This package has only been tested for storyboard - SwiftUI has not been tested
 
-# Install Using Swift Package Manager (Recommended Method)
+## Install Using Swift Package Manager (Recommended Method)
 
  - First open your project in Xcode and then for Xcode 12, navigate to File → Swift Packages → Add Package Dependency... or For Xcode 13, navigate to Files → Add Package
  - Paste the repository URL (https://github.com/SkiingIsFun123/Improved-Animations) and click the next button
@@ -17,9 +17,9 @@ This package has only been tested for storyboard - SwiftUI has not been tested
  - Click finish
  - You're all set, and thank you for using ImprovedAnimations!
 
-## 🔨 Code Examples
+# 🔨 Code Examples
 
-# 📱 Slide Animation
+## 📱 Slide Animation
 ```
 import ImprovedAnimations
 ImprovedAnimations.slideAnimation(view: view, direction: "right", time: 0.3, destination: "ViewControllerToPresent")
@@ -30,7 +30,7 @@ ImprovedAnimations.slideAnimation(view: view, direction: "right", time: 0.3, des
  - Time: time the animation will take to complete (value is in a float form)
  - Destination: the view controller to be presented (pass the view controller's storyboard identifier for this value)
  
-# 📱 Fade Animation
+## 📱 Fade Animation
 ```
 import ImprovedAnimations
 ImprovedAnimations.fadeAnimation(view: view, time: 0.3, destination: "ViewControllerToPresent")
