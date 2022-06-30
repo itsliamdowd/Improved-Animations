@@ -11,7 +11,7 @@ This package has only been tested for storyboard - SwiftUI has not been tested
 
 ## Install Using Swift Package Manager (Recommended Method)
 
- - First open your project in Xcode and then for Xcode 12, navigate to File → Swift Packages → Add Package Dependency... or For Xcode 13, navigate to Files → Add Package
+ - First open your project in Xcode and then for Xcode 12, navigate to File → Swift Packages → Add Package Dependency... or for Xcode 13, navigate to Files → Add Package
  - Paste the repository URL (https://github.com/SkiingIsFun123/Improved-Animations) and click the next button
  - For version, verify it's up to next major version
  - Click finish
