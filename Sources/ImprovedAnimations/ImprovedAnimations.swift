@@ -63,4 +63,16 @@ public struct ImprovedAnimations {
         let presentedVC = storyboard.instantiateViewController(withIdentifier: destination)
         topVC.present(presentedVC, animated: false, completion: nil)
     }
+    
+    public static func fadeAnimation(view: UIView, time: Float, destination: String) {
+        let transition = CATransition()
+        transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+        transition.type = CATransitionType.fade
+        transition.duration = CFTimeInterval(time)
+        view.window!.layer.add(transition, forKey: kCATransition)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let topVC = topMostController()
+        let presentedVC = storyboard.instantiateViewController(withIdentifier: destination)
+        topVC.present(presentedVC, animated: false, completion: nil)
+    }
 }
