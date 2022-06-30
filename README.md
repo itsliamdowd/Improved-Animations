@@ -1,6 +1,6 @@
 # ImprovedAnimations
 
-A package designed to make animations between different view controllers as simple as possible.
+A package designed to make animations between different view controllers as simple as possible!
 
 Slide Animation
 ```
