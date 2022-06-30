@@ -60,9 +60,7 @@ public struct ImprovedAnimations {
         view.window!.layer.add(transition, forKey: kCATransition)
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let topVC = topMostController()
-        //let presentedVC = storyboard.instantiateViewController(withIdentifier: destination) as! viewControllertoPresent
         let presentedVC = storyboard.instantiateViewController(withIdentifier: destination)
-        //let presentViewController = UIApplication.shared.keyWindow?.rootViewController
         topVC.present(presentedVC, animated: false, completion: nil)
     }
 }
