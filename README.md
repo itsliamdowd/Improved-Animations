@@ -2,7 +2,7 @@
 
 A package designed to make animations between different view controllers easy using only one line.
 
-###Slide Animation
+#Slide Animation
 ```
 import ImprovedAnimations
 ImprovedAnimations.slideAnimation(view: view, direction: "right", time: 0.3, destination: "ViewControllerToPresent")
